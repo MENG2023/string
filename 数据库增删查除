@@ -1,0 +1,52 @@
+     内容总结
+. 新增:
+    单行插入              insert into 表 (字段1,....字段n) values (value1,...value n);
+ 多行插入      insert into 表 (字段1,...字段N) values
+     (value1, ...),
+    (value2, ...),
+    (value3, ...);
+
+查询
+-- 全列查询
+select * from 表
+-- 指定列查询
+select 字段1,字段2... from 表
+-- 查询表达式字段
+select 字段1+100,字段2+字段3 from 表
+-- 别名
+select 字段1 别名1, 字段2 别名2 from 表
+-- 去重DISTINCT
+select distinct 字段 from 表
+-- 排序ORDER BY
+select * from 表 order by 排序字段
+-- 条件查询WHERE：
+-- (1)比较运算符 (2)BETWEEN ... AND ... (3)IN (4)IS NULL (5)LIKE (6)AND (7)OR
+
+   修改
+update 表 set 字段1 = value1,  字段2 = value2...where 条件
+
+删除
+ 
+delecte from 表 where 条件
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(8)NOT
+select * from 表 where 条件
