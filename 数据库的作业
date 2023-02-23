@@ -1,0 +1,127 @@
+在以上创建的商品表中插入一条数据：名称为“学生书包”、价格18.91、库存101、描述为空
+
+
+
+
+show databases;
+
++--------------------+
+
+| Database      |
+
++--------------------+
+
+| exam_result    |
+
+| goods       |
+
+| information_schema |
+
+| mysql       |
+
+| performance_schema |
+
+| sys        |
+
++--------------------+
+
+6 rows in set (0.00 sec)
+
+
+
+mysql> use goods;
+
+Database changed
+
+mysql> drop table if exists goods;
+
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+
+
+mysql> create table goods (
+
+  -> name varchar(20),
+
+  -> price decimal(3,1),
+
+  -> id int
+
+  -> );
+
+Query OK, 0 rows affected (0.04 sec)
+
+
+
+mysql> insert into goods (name, price, id) values('学生书包', 18.91,101);
+
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+
+
+mysql> desc goods;
+
++-------+--------------+------+-----+---------+-------+
+
+| Field | Type     | Null | Key | Default | Extra |
+
++-------+--------------+------+-----+---------+-------+
+
+| name | varchar(20) | YES |   | NULL  |    |
+
+| price | decimal(3,1) | YES |   | NULL  |    |
+
+| id  | int(11)   | YES |   | NULL  |    |
+
++-------+--------------+------+-----+---------+-------+
+
+3 rows in set (0.00 sec)
+
+
+
+mysql> select * from goods;
+
++--------------+-------+------+
+
+| name     | price | id  |
+
++--------------+-------+------+
+
+| 学生书包   | 18.9 | 101 |
+
++--------------+-------+------+
+
+
+
+在图书表中新增一条记录：Java核心技术、作者“Cay S. Horstman”，价格56.43，分类为“计算机技术”
+
+
+
+
+
+
+
+
+
+ drop table if exists library;
+
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+
+
+mysql> create table library (
+
+  -> name varchar(20),
+
+  -> author varchar(20),
+
+  -> price decimal(3,1),
+
+  -> category varchar(20)
+
+  -> );
+
+Query OK, 0 rows affected (0.04 sec)
+
+
+
